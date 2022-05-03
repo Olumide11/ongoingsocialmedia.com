@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAE | CHAT</title>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- For Dark Mode -->
+    <link rel="stylesheet" href="../darkmode.css">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    
+</head>
+
+<body>
+
+
+<!------------------------------For Mobile Create Post------------------------------>
+<div class="mobile-create-post">
+
+    <div class="mobile-create-post-head">
+        <div>
+            <span class="material-icons-sharp" onclick="history.back()">arrow_back</span>
+            <h1>Create post</h1>
+        </div>
+        <button type="button" class="posts-btn">Post</button>
+    </div>
+
+    <div class="mobile-create-post-profile">
+        <div class="mobile-create-post-profile-img">
+            <img src="../images/profile-1.jpg" alt="">
+        </div>
+        <div class="mobile-create-post-profile-name">
+            <h1>Mercy Peace</h1>
+            <select name="" id=""> 
+                <option value="Anyone">Anyone</option>
+                <option value="Friends">Friends</option>
+                <option value="Only me">Only me</option>
+            </select>
+        </div>
+    </div>
+
+    <textarea name="" id="" placeholder="What's on your mind Mercy?"></textarea>
+</div>
+
+
+<div class="mobile-create-post-bottom">
+    <div>
+
+        <label for="imageFile"><span class="material-icons-sharp">camera</span></label>
+        <input type="file" style="display: none;" id="imageFile" capture="user" accept="image/*">
+
+        <label for="videoFile"><span class="material-icons-sharp">videocam</span></label>
+        <input type="file" style="display: none;" id="videoFile" capture="user" accept="video/*">
+
+        <label for="uploadFile"><span class="material-icons-sharp">collections</span></label>
+        <input type="file" style="display: none;" id="uploadFile">
+    </div>
+    <span class="material-icons-sharp">send</span>
+</div>
+
+
+
+
+<!-- Activate the Dark mode on this page -->
+<div id="dark-btn" style="display: none;">
+    <span></span>
+</div>
+
+<script src="../javascript/mobile_create_post.js"></script>
+<script src="../javascript/darkmode.js"></script>
+</body>
+</html> 

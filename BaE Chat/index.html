@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAE | CHAT</title>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- For Dark Mode -->
+    <link rel="stylesheet" href="darkmode.css">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    
+</head>
+<body>
+   
+<!---------------------------Nav For Desktop--------------------------->
+<nav class="desktop">
+    <div class="container">
+        <div class="nav-left">
+            <div class="rounded-photo logo">
+                <img src="images/bae.png" alt="">
+            </div>
+            <div class="search-input">
+                <span class="material-icons-sharp">search</span>
+                <input type="search" placeholder="Search a friend">
+            </div>
+        </div>
+        <div class="nav-center">
+            <ul>
+                <li><a href="index.html">
+                    <span class="material-icons-sharp">home</span>
+                </a></li>
+                <li><a href="../friends">
+                    <span class="material-icons-sharp">people_outline</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="material-icons-sharp">textsms</span>
+                </a></li>
+                <!-- <li><a href="#">
+                    <span class="material-icons-sharp">storefront</span>
+                </a></li> -->
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-user-profile">
+                <div class="rounded-photo online">
+                    <img src="images/profile-4.jpg" alt="">
+                </div>
+                <div class="profile-name">
+                    <h1>Mercy</h1>
+                </div>
+            </div>
+            <ul>
+                <li onclick="notification_toggle()"><a href="#">
+                    <span class="material-icons-sharp">notifications</span>
+                </a></li>
+                <li class="drop-arrow" onclick="settings_menu_toggle()"><a href="#">
+                    <span class="material-icons-sharp">arrow_drop_down</span>
+                </a></li>
+            </ul>
+        </div>
+
+        <!-------------------------Setting Menu------------------------->
+        <div class="settings-menu">
+            <div class="settings-menu-inner">
+                <div class="aside-user-profile">
+                    <div class="rounded-photo online">
+                        <img src="images/profile-4.jpg" alt="">
+                    </div>
+                    <div class="profile-name">
+                        <h2>Mercy Peace</h2>
+                        <a href="#"><small>See your profile </small></a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#"><div class="aside-user-profile">
+                    <div class="icons-menu">
+                        <span class="material-icons-sharp">announcement</span>
+                    </div>
+                    <div class="profile-name">
+                        <h2>Give Feedback</h2>
+                        <a href="#"><small>Help us to improve on our design</small></a>
+                    </div>
+                </div></a>
+                <hr>
+                <a href="#"><div class="setting-links">
+                    <span class="material-icons-sharp">settings</span>
+                    <div class="links-text">
+                        <div>
+                            <h2>Settings & Privacy</h2>
+                        </div>
+                        <div>
+                            <span class="material-icons-sharp">chevron_right</span>
+                        </div>
+                    </div>
+                </div></a>
+                <a href="#"><div class="setting-links">
+                    <span class="material-icons-sharp">help</span>
+                    <div class="links-text">
+                        <h2>Help & Support</h2>
+                        <span class="material-icons-sharp">chevron_right</span>
+                    </div>
+                </div></a>
+                <a href="#"><div class="setting-links">
+                    <span class="material-icons-sharp">dark_mode</span>
+                    <div class="links-text">
+                        <h2>Dark/Light</h2>
+                        <div id="dark-btn">
+                            <span></span>
+                        </div>
+                    </div>
+                </div></a>
+                <a href="#"><div class="setting-links">
+                    <span class="material-icons-sharp">logout</span>
+                    <div class="links-text">
+                        <h2>Logout</h2>
+                        <span class="material-icons-sharp">chevron_right</span>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-----------------------------Nav For Mobile----------------------------->
+    <div class="mobile-container">
+        <div class="mobile">
+                <div><a href="../">
+                    <span class="material-icons-sharp">home</span>
+                </a></div>
+                <div><a href="../friends">
+                    <span class="material-icons-sharp">people_outline</span>
+                </a></div>
+                <div><a href="../create_post">
+                    <span class="material-icons-sharp" onclick="openBtn()">add_circle</span>
+                </a></div>
+                <div><a href="../notifications">
+                    <span class="material-icons-sharp">notifications</span>
+                </a></div>
+                <div>
+                    <span class="material-icons-sharp mobile-menu-open">menu</span>
+                </div>                    
+            </ul>
+        </div>
+    </div>
+
+<!------------------------------For Mobile Page Header------------------------------>
+<div class="mobile-page-header">
+    <div class="mobile-page-header-img">
+        <a href="profile"><img src="../images/profile-3.jpg" alt=""></a>
+    </div>
+    <div class="mobile-page-header-search">
+        <span class="material-icons-sharp">search</span>
+        <input type="search" placeholder="Looking for a friend?">
+    </div>
+    <a href="../messenger"><span class="material-icons-sharp">question_answer</span></a>
+</div>
+
+
+
+<!-----------------------------Mobile Menu----------------------------->
+    <div class="mobile-menu">
+        <a href="profile/" class="mobile-menu-profile">
+            <div class="mobile-menu-profile-photo">
+                <img src="images/profile-4.jpg" alt="">
+            </div>
+            <div class="mobile-menu-profile-name">
+                <p>Mercy Peace</p>
+            </div>
+        </a>
+
+        <div><a href="">
+            <span class="material-icons-sharp">people</span>
+            <p>Friends</p>
+        </a></div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">groups</span>
+            <p>Groups</p>
+        </a></div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">storefront</span>
+            <p>Marketplace</p>
+        </a></div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">chat</span>
+            <p>Messenger</p>
+        </a></div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">notifications</span>
+            <p>Notification</p>
+        </a></div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">settings</span>
+            <p>Settings & Privacy</p>
+        </a></div>
+
+        <div class="links-text">
+            <div class="flex-links">
+                <span class="material-icons-sharp dark-mode-span-for-mobile">dark_mode</span>
+                <h2>Dark/Light</h2>
+            </div>
+            <div id="dark-btn2">
+                <span></span>
+            </div>
+        </div>
+
+        <div><a href="">
+            <span class="material-icons-sharp">help</span>
+            <p><span style="color:rgb(255, 118, 94); font-size: 1rem">BaE</span> Help & Support</p>
+        </a></div>
+        <div class="mobile-menu-close-btn">
+            <span class="material-icons-sharp mobile-menu-close-btn">filter_list</span>
+        </div>
+    </div>
+
+    </div>
+<!------------------------End of Mobile Navigation------------------------>
+
+
+
+    <!-- Page Contents -->
+    <main>
+        <aside>
+            <ul>
+                <li><a href="#">
+                    <div class="aside-user-profile">
+                        <div class="rounded-photo online">
+                            <img src="images/profile-4.jpg" alt="">
+                        </div>
+                        <div class="profile-name">
+                            <h2>Mercy Peace</h2>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="friends">
+                    <span class="material-icons-sharp aside-span">people</span>
+                    <h2>Friends</h2>
+                </a></li>
+                <li><a href="#">
+                    <span class="material-icons-sharp aside-span">groups</span>
+                    <h2>Groups</h2>
+                </a></li>
+                <li><a href="#">
+                    <span class="material-icons-sharp aside-span">storefront</span>
+                    <h2>Marketplace</h2>
+                </a></li>
+                <li><a href="#">
+                    <span class="material-icons-sharp aside-span">message</span>
+                    <h2>Messenger</h2>
+                </a></li>
+            <hr>
+                <li><a href="#">
+                    <span class="material-icons-sharp aside-span">notifications</span>
+                    <h2>Notification</h2>
+                </a></li>
+                <li><a href="#">
+                    <span class="material-icons-sharp aside-span">settings</span>
+                    <h2>Settings</h2>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <div class="a">
+                            <span class="material-icons-sharp aside-span">logout</span>
+                            <h2>Logout</h2>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- ====================================MIDDLE==================================== -->
+
+        <div class="middle">
+            <div class="post">
+                <div class="create-post">
+                    <a href="#"><div class="rounded-photo online">
+                        <img src="images/profile-4.jpg" alt="">
+                    </div></a>
+                    <div class="input-btn">
+                        <input type="text" placeholder="What's on your mind?" onclick="popup()">
+                        <button type="button" class="btn">Post</button>
+                    </div>
+                </div>
+                <!-- <hr>
+                <div class="actions-create-post">
+                    <a href="#">
+                        <div class="actions">
+                            <span class="material-icons-sharp">smart_display</span>
+                            <h1>Videos</h1>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="actions">
+                            <span class="material-icons-sharp">collections</span>
+                            <h1>Image</h1>
+                        </div>
+                    </a>
+                    <a href="#">
+                    <div class="actions">
+                        <span class="material-icons-sharp">sell</span>
+                        <h1>Sell</h1>
+                    </div>
+                    </a>
+                </div> -->
+
+            </div>
+
+
+             
+
+            <!------------------------------------FEEDS------------------------------------>
+            <div class="feeds">
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-1.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Mercy Mike</p>
+                                <small>1 minute ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Nice time with friends today</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-4.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span" onclick="reaction_actions()">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>2</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>10</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>6</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Carl Mike</a></b> and 1 other people</p>
+                    </div>
+                    <a href="#"><small>View all 10 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Lopez Israel</p>
+                                <small>6 minute ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Awesome moments are the best</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-5.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>8</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>50</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>10</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-7.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Creative Mike</p>
+                                <small>Just now</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Get your explainer videos here guys <br> Check out this and leave your comments</p>
+                    </div>
+                    <div class="feed-img">
+                        <video width="100%" height="100%" controls>
+                            <source src="videos/brand.mp4" type="video/mp4">
+                            <source src="videos/brand.ogg" type="video/ogg">
+                            Your Browser Does Not Support the Video Tag
+                        </video>
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>1k</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>580</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>100</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Lopez Israel</p>
+                                <small>6 minute ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Awesome moments are the best</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-1.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>8</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>50</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>10</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Lopez Israel</p>
+                                <small>6 minute ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Awesome moments are the best</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-3.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>8</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>50</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>10</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-7.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Creative Mike</p>
+                                <small>Just now</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Another Animation Job for a Clothe Brand Check out this and leave your comments <br> #clothe_brand <br> #animation</p>
+                    </div>
+                    <div class="feed-img">
+                        <video width="100%" height="100%" controls>
+                            <source src="videos/clothe.mp4" type="video/mp4">
+                            <source src="videos/clothe.ogg" type="video/ogg">
+                            Your Browser Does Not Support the Video Tag
+                        </video>
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>1k</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>580</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>100</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Lopez Israel</p>
+                                <small>6 minute ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Awesome moments are the best</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-7.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>8</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>50</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>10</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Lopez India</a></b> and 7 other people</p>
+                    </div>
+                    <a href="#"><small>View all 50 comments</small></a>
+                </div>
+                <div class="feed">
+                    <div class="feed-head">
+                        <a href="#"><div class="feed-user">
+                            <div class="rounded-photo">
+                                <img src="images/profile-5.jpg" alt="">
+                            </div>
+                            <div class="feed-user-name">
+                                <p>Cynthia Great</p>
+                                <small>1 hour ago</small>
+                            </div>
+                        </div></a>
+                        <a href="#"><span class="material-icons-sharp">more_horiz</span></a>
+                    </div>
+                    <div class="feed-text">
+                        <p>Beatiful memories to keep here</p>
+                    </div>
+                    <div class="feed-img">
+                        <img src="images/feed-2.jpg" alt="">
+                    </div>
+                    <div class="feed-actions">
+                        <div class="feed-action">
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">favorite_border</span>
+                                <p>2</p>
+                            </div></a>
+                            <a href="#"><div class="feed-span">
+                                <span class="material-icons-sharp">maps_ugc</span>
+                                <p>10</p>
+                            </div></a>
+                            <a href="#">
+                            <div class="feed-span">
+                                <span class="material-icons-sharp">share</span>
+                                <p>6</p>
+                            </div></a>
+                        </div>
+                        <a href="#"><span class="material-icons-sharp save-icon">turned_in</span></a>
+                    </div>
+                    <div class="liked-by">
+                        <img src="images/profile-4.jpg" alt="">
+                        <p>Liked by <b><a href="#">Oludowole Olumide</a></b> and 1 other people</p>
+                    </div>
+                    <a href="#"><small>View all 10 comments</small></a>
+                </div>
+            </div>
+            
+        </div>
+
+        
+
+        <!-- ====================================Right==================================== -->
+        <div class="right">
+            <div class="nofications">
+                <div class="right-heading">
+                    <div>
+                        <h1>Notification</h1>
+                    </div>
+                    <div>
+                        <span class="material-icons-sharp aside-span">notifications</span>
+                    </div>
+                </div>
+                <div class="all-notification">
+                    <a href="#">
+                        <div class="right-notication">
+                            <div class="notification-photo">
+                                <img src="images/profile-5.jpg" alt="">
+                            </div>
+                            <div class="notification-details">
+                                <h2>Cynthia Great</h2>
+                                <p>Has a new post</p>
+                                <small>1 minutes ago</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="right-notication">
+                            <div class="notification-photo">
+                                <img src="images/profile-1.jpg" alt="">
+                            </div>
+                            <div class="notification-details">
+                                <h2>Mercy Mike</h2>
+                                <p>Commented on your post</p>
+                                <small>2 minutes ago</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="right-notication">
+                            <div class="notification-photo">
+                                <img src="images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="notification-details">
+                                <h2>Lopez Isreal</h2>
+                                <p>Commented on your post</p>
+                                <small>8 minutes ago</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contacts">
+                <div class="right-heading">
+                    <h1>Active Contacts</h1>
+                </div>
+
+                <div class="active-contacts">
+                    <div class="active-users">
+                        <a href="#">
+                            <div class="aside-user-profile">
+                                <div class="rounded-photo online">
+                                    <img src="images/profile-4.jpg" alt="">
+                                </div>
+                                <div class="profile-name">
+                                    <h2>Oludowole Olumide</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="active-users">
+                        <a href="#">
+                            <div class="aside-user-profile">
+                                <div class="rounded-photo online">
+                                    <img src="images/profile-4.jpg" alt="">
+                                </div>
+                                <div class="profile-name">
+                                    <h2>Oludowole Olumide</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="active-users">
+                        <a href="#">
+                            <div class="aside-user-profile">
+                                <div class="rounded-photo online">
+                                    <img src="images/profile-4.jpg" alt="">
+                                </div>
+                                <div class="profile-name">
+                                    <h2>Oludowole Olumide</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <!-------------------------------------------ALL POP UP------------------------------------------->
+
+    <!-- ================Create Post Form================ -->
+    <div class="flex">
+        <div class="newpost">
+                <div class="new-post-head desktop-class">
+                    <h1>Create Post</h1>
+                    <span class="material-icons-sharp close-function">close</span>
+                </div>
+                <hr>
+        <form action="" method="POST">
+                <div class="feed-head">
+                    <a href="#"><div class="feed-user">
+                        <div class="rounded-photo newpost-img">
+                            <img src="images/profile-1.jpg" alt="">
+                        </div>
+                        <div class="feed-user-name">
+                            <p>Mercy Mike</p>
+                            <select name="" id="">
+                                <option value="Public">Public</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Only me">Only me</option>
+                            </select>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="new-post-input">
+                    <textarea name="" id="" placeholder="What's on your mind Mike?"></textarea>
+                </div>
+                <div class="new-post-add">
+                    <div class="new-post-add-text">
+                        <h1>Add to your post</h1>
+                    </div>
+                    <div class="new-post-span">
+                        <a href=""><span title="Add Image" class="material-icons-sharp">collections</span></a>
+                        <a href=""><span title="Add Video" class="material-icons-sharp">smart_display</span></a>
+                        <a href=""><span title="Tag a Friend" class="material-icons-sharp">group_add</span></a>
+                    </div>
+                </div>
+                <button type="submit" class="post-btn">Post</button>
+        </form>
+        </div>
+    </div>
+
+
+    <!----------------------POP For Desktop Notifications---------------------->
+
+    <div class="notifications">
+        <div class="notification-head">
+            <span class="material-icons-sharp notifications-close-btn" onclick="notification_close()">filter_list</span>
+        </div>
+        <h1>Latest</h1>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-1.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp">circle</span>
+            </div>
+        </a>
+
+        <h1>Others</h1>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-1.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-2.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-3.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-4.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-5.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-6.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-7.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-8.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-9.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-10.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-11.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-12.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-13.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        <a href="" class="notification-profile">
+            <div class="notification-details">
+                <div class="notification-profile-photo">
+                    <img src="images/profile-14.jpg" alt="">
+                </div>
+                <div class="notification-profile-name">
+                    <h1>Mary Peace</h1>
+                    <p>Commented on your post</p>
+                    <small>Just now</small>
+                </div>
+            </div>
+            <div class="active-shape">
+                <span class="material-icons-sharp read">circle</span>
+            </div>
+        </a>
+        
+    </div>
+
+
+<script src="javascript/script.js"></script>
+<script src="javascript/notification.js"></script>
+<script src="javascript/darkmode.js"></script>
+<script src="javascript/darkmode2.js"></script>
+<script src="javascript/reactions.js"></script>
+<script src="javascript/mobilemenu.js"></script>
+<script src="javascript/mobile_create_post.js"></script>
+</body>
+</html>
